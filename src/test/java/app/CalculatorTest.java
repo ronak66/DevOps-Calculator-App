@@ -15,21 +15,21 @@ public class CalculatorTest
     /**
      * Rigorous Test :-)
      */
-    // private Calculator calculator;
+    private Calculator calculator;
     
-    // @Before
-    // public void setup(){
-    //     calculator = new Calculator();
-    // }
+    @Before
+    public void setup(){
+        calculator = new Calculator();
+    }
 
-    // @Test
-    // public void testSquareRoot(){
-    //     double num = 101;
-    //     double expected_result = Math.sqrt(num);
-    //     calculator.square_root(num);
-    //     double result = calculator.get_ans();
-    //     Assert.assertEquals(expected_result, result, 0.00001);
-    // }
+    @Test
+    public void testSquareRoot(){
+        double num = 101;
+        double expected_result = Math.sqrt(num);
+        calculator.square_root(num);
+        double result = calculator.get_ans();
+        Assert.assertEquals(expected_result, result, 0.00001);
+    }
 
     // @Test
     // public void testfactorial(){
