@@ -1,0 +1,8 @@
+---
+- name: Pull docker image of Calculator-DevOps
+  hosts: all
+  tasks:
+    - name: Pull image Calculator-DevOps
+      docker_image:
+        name: ronak66/calculator-devops
+        source: pull
