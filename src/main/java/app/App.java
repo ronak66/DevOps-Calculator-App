@@ -2,16 +2,25 @@ package app;
 import java.util.*;  
 import java.lang.Math; 
 // import Calculator;
+    
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class App{
 
     private Scanner sc;
     private Calculator cal_app;
-
+    private static final Logger logger = LogManager.getLogger(App.class);
 
     public double get_input(Scanner sc){  
-        double number = sc.nextDouble();  
-        return number;
+        // try{
+            double number = sc.nextDouble();  
+            return number;
+        // } catch (InputMismatchException error) {
+        //     logger.error("Invalid input, Entered input is not a number");
+        //     return;
+        // }
+        // return number;
     }
 
     public void initilizing(){
@@ -30,8 +39,12 @@ public class App{
         while(true){
             System.out.print("Select the desired operation number: ");
             double operation = this.get_input(sc);
-            if(operation == 5) break;
+            if(operation == 5){
+                logger.info("[Exiting] - ");
+                break;
+            }
             else if(operation <=0 || operation>5){
+                logger.info("[Invalid Operation] - ");
                 System.out.println("Invalid Operation, Please input a valid operation number");
                 continue;
             }
@@ -45,12 +58,16 @@ public class App{
             else{
                 System.out.print("Enter Number: ");
                 double number = this.get_input(sc);
-                if(operation == 1) cal_app.square_root(number);    
+                if(operation == 1){
+                    logger.info("[Square Root] - " + number);
+                    cal_app.square_root(number);    
+                }
                 // else if(operation == 2) cal_app.factorial(number);
                 // else if(operation == 3) cal_app.loge(number);
                 else System.out.println("******** Invalid Operation Number ********");
             }
             System.out.println("==========> Ans is: " + cal_app.get_ans());
+            logger.info("[RESULT] - " + cal_app.get_ans());
         }
         System.out.println("----- Scientific Calculator App Closing ------");
     }
