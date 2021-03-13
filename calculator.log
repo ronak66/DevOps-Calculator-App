@@ -1,3 +1,12 @@
 12/Mar/2021:20:10:03 319 [App.java] [INFO] app.App [Square Root] - 2.0
 12/Mar/2021:20:10:03 326 [App.java] [INFO] app.App [RESULT] - 1.4142135623730951
 12/Mar/2021:20:10:08 801 [App.java] [INFO] app.App [Exiting] - 
+13/Mar/2021:18:32:47 468 [App.java] [INFO] app.App [Square Root] - 256.0
+13/Mar/2021:18:32:47 474 [App.java] [INFO] app.App [RESULT] - 16.0
+13/Mar/2021:18:32:57 133 [App.java] [INFO] app.App [Square Root] - 300.0
+13/Mar/2021:18:32:57 133 [App.java] [INFO] app.App [RESULT] - 17.320508075688775
+13/Mar/2021:18:32:58 468 [App.java] [INFO] app.App [Exiting] - 
+13/Mar/2021:18:36:30 446 [App.java] [INFO] app.App [RESULT] - 120.0
+13/Mar/2021:18:36:43 569 [App.java] [INFO] app.App [RESULT] - 729.0
+13/Mar/2021:18:36:52 017 [App.java] [INFO] app.App [RESULT] - 0.9932517730102834
+13/Mar/2021:18:37:09 481 [App.java] [INFO] app.App [Exiting] - 

@@ -13,14 +13,8 @@ public class App{
     private static final Logger logger = LogManager.getLogger(App.class);
 
     public double get_input(Scanner sc){  
-        // try{
-            double number = sc.nextDouble();  
-            return number;
-        // } catch (InputMismatchException error) {
-        //     logger.error("Invalid input, Entered input is not a number");
-        //     return;
-        // }
-        // return number;
+        double number = sc.nextDouble();  
+        return number;
     }
 
     public void initilizing(){
@@ -29,9 +23,9 @@ public class App{
         System.out.println("----- Scientific Calculator cal_app -----");
         System.out.println("Following are the available operations:");
         System.out.println("1. Square Root Function");
-        // System.out.println("2. Factorial Function");
-        // System.out.println("3. Natural Logarithm (base e) Function");
-        // System.out.println("4. Power Function");
+        System.out.println("2. Factorial Function");
+        System.out.println("3. Natural Logarithm (base e) Function");
+        System.out.println("4. Power Function");
         System.out.println("5. exit");
     }
 
@@ -48,13 +42,13 @@ public class App{
                 System.out.println("Invalid Operation, Please input a valid operation number");
                 continue;
             }
-            // else if(operation == 4){
-            //     System.out.print("Enter Base: ");
-            //     double base = this.get_input(sc);
-            //     System.out.print("Enter power: ");    
-            //     double power = this.get_input(sc);
-            //     cal_app.power(base,power);
-            // }
+            else if(operation == 4){
+                System.out.print("Enter Base: ");
+                double base = this.get_input(sc);
+                System.out.print("Enter power: ");    
+                double power = this.get_input(sc);
+                cal_app.power(base,power);
+            }
             else{
                 System.out.print("Enter Number: ");
                 double number = this.get_input(sc);
@@ -62,8 +56,8 @@ public class App{
                     logger.info("[Square Root] - " + number);
                     cal_app.square_root(number);    
                 }
-                // else if(operation == 2) cal_app.factorial(number);
-                // else if(operation == 3) cal_app.loge(number);
+                else if(operation == 2) cal_app.factorial(number);
+                else if(operation == 3) cal_app.loge(number);
                 else System.out.println("******** Invalid Operation Number ********");
             }
             System.out.println("==========> Ans is: " + cal_app.get_ans());
