@@ -38,7 +38,7 @@ public class App{
                 break;
             }
             else if(operation <=0 || operation>5){
-                logger.info("[Invalid Operation] - ");
+                logger.error("[Invalid Operation] - ");
                 System.out.println("Invalid Operation, Please input a valid operation number");
                 continue;
             }
@@ -47,6 +47,7 @@ public class App{
                 double base = this.get_input(sc);
                 System.out.print("Enter power: ");    
                 double power = this.get_input(sc);
+                logger.info("[Power] - " + base + "," + power);
                 cal_app.power(base,power);
             }
             else{
@@ -56,8 +57,14 @@ public class App{
                     logger.info("[Square Root] - " + number);
                     cal_app.square_root(number);    
                 }
-                else if(operation == 2) cal_app.factorial(number);
-                else if(operation == 3) cal_app.loge(number);
+                else if(operation == 2){
+                    logger.info("[Factorial] - " + number);
+                    cal_app.factorial(number);
+                }
+                else if(operation == 3){
+                    logger.info("[Log base e] - " + number);
+                    cal_app.loge(number);
+                }
                 else System.out.println("******** Invalid Operation Number ********");
             }
             System.out.println("==========> Ans is: " + cal_app.get_ans());
